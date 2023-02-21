@@ -1,21 +1,16 @@
 {
-  "name": "d1-json",
+  "name": "template-json-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Template for creating a backend using JSON Server",
+  "main": "server.js",
+  "license": "MIT",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "NODE_ENV=development node server.js",
+    "start": "NODE_ENV=production node server.js",
+    "watch": "json-server db.json --port=8000"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "json-serve": "^0.1.0",
+    "clone": "^2.1.2",
     "json-server": "^0.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
   }
 }
